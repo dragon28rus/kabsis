@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report	title="Отчет на отключение ТВ" dyn_class="ru.kabsis.modules.Reports.custom_tv_otkl.java" type="java">
+	<address title="Город" cityName="cityId"/>
+  <period name1="date1" name2="date2" title="Период для интернет договоров" default1="first_day_of_month" default2="last_day_of_month"/>
+  <fields>
+    <item id="colum1" title="№ договора"/>
+    <item id="colum2" title="Ф.И.О."/>    
+    <item id="colum3" title="Адрес"/>
+  </fields>
+	<!-- http://docs.bitel.ru/pages/viewpage.action?pageId=1607043 -->
+</report>
