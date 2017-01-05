@@ -482,7 +482,7 @@ BgSetStatus setstatus = contractSetStatusMap.get(abonent.contract);
 						ucm.update(uc);
 						// пакеты добавляем
 						int packetIds[] = DIGIT_PACKETS.get(sbs.packet);
-						if(packetIds!=null && packetIds.length>0)
+						if(packetIds!=null && packetIds.length>0 && (status == 0 || status == 7 || status == 6))
 						{
 							for(int packetId : packetIds)
 							{
@@ -490,13 +490,8 @@ BgSetStatus setstatus = contractSetStatusMap.get(abonent.contract);
 								CardPacket cardPacket = new CardPacket();
 								cardPacket.setContractId(contract.getId());
 								cardPacket.setUsercardId(uc.getId());
-								cardPacket.setDateFrom(uc.getDate1());
+								cardPacket.setDateFrom(setstatus.date);
 								cardPacket.setPacketId(packetId);
-								cardPacket.setStatus(2);
-								if(status == 0 || status == 7 || status == 6}) {
-									cardPacket.setDateFrom(setstatus.date);
-									cardPacket.setStatus(1);
-								}
 								cpm.updateCardPacket(cardPacket);
 							}
 						}
